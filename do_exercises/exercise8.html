@@ -1,0 +1,59 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <title>Exercise 8</title>
+    <script>
+
+        function start() {
+            document.getElementById("div1").style.fontWeight = "bold";
+            document.getElementById("div2").style.color = "blue";
+            document.getElementById("div3").style.marginLeft = "10%";
+            document.getElementById("div4").innerHTML = "<p>Set by Raymie";
+            document.getElementById("div4").style.fontStyle = "italic";
+        }
+
+        function styleToGold() {
+            for (let div of document.getElementsByTagName("div")) {
+                div.style.backgroundColor = "gold";
+            }
+        }
+
+        function removeSecondDiv() {
+            document.getElementById("div2").style.display = "none";
+        }
+
+        function addParagraphTo5thDiv() {
+            let div5 = document.getElementById("div5");
+            console.assert(div5 != null);
+            for (let i = 1; i <= 3; i++) {
+                let p = document.createElement('p');
+                p.innerHTML = `This paragraph ${i}`;
+                div5.appendChild(p)
+            }
+        }
+    </script>
+</head>
+<body onload="start()">
+<h2>Exercise 8</h2>
+<div id="div1">
+    This is a first bit of text
+</div>
+<div id="div2">
+    This is the second part<br/>
+    This is the second part<br/>
+    This is the second part<br/>
+    This is the second part<br/>
+    This is the second part<br/>
+</div>
+<div id="div3">
+    This is a final part of text
+</div>
+<div id="div4"></div>
+<div id="div5"></div>
+
+<button onclick="styleToGold();">Gold</button>
+<br><br>
+<button onclick="removeSecondDiv()">Kill 2nd div</button>
+<button onclick="addParagraphTo5thDiv()">Add paragraphs to div5</button>
+</body>
+</html>

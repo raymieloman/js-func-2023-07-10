@@ -1,0 +1,55 @@
+﻿<!doctype html>
+<html>
+<head>
+  <title>Exercise 7</title>
+  <script>
+
+
+    function start() {
+      document.bgColor="lightgreen"
+
+      for (let property in window.document) {
+        if (property == "bgcolor") {
+          alert("Found it");
+          alert(window.document[property])
+        }
+        console.log(`window has property: ${property} with value ${window[property]}`);
+        console.table(person)
+        console.assert(i==2, "Foutje")
+      }
+    }
+
+    document.title = ":: Poedel ::";
+
+
+
+    function changeIt() {
+      document.write("Dit is de enige inhoud");
+    }
+
+
+  </script>
+</head>
+<body>
+  <h2>
+    Exercise 7</h2>
+  <p> This text will disappear in part one</p>
+  <script>
+
+    window.bgColor = "red";
+    for (let property in window.document) {
+      if (property == "bgcolor") {
+        alert("Found it");
+        alert(window.document[property])
+      }
+      console.log(`window has property: ${property} with value ${window[property]}`);
+    }
+
+
+  
+  </script>
+
+  <button onclick="changeIt();">Change it</button>
+
+</body>
+</html>

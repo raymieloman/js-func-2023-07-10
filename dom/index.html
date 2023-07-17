@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>:: dom formulier ::</title>
+</head>
+<body>
+
+<div id="content">
+
+  Hello Utrecht
+
+</div>
+
+<form name="data">
+  Address<input name="address" type="text" value="Abbey Road 42">
+</form>
+
+
+<script>
+  alert(window.document.data.address.value)
+
+  window.document.data.address.value="Daltonlaan 700";
+
+  document.getElementById("content").innerHTML="<p>Hello Feyenoord</p>";
+
+  // page 72
+  let divs = document.getElementsByTagName("div");
+  for (let div of divs) {
+    div.style.backgroundColor = "#271cbd";
+  }
+
+</script>
+
+
+</body>
+</html>

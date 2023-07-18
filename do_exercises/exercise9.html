@@ -1,0 +1,30 @@
+﻿<!doctype html>
+<html>
+<head>
+    <title>Exercise 9</title>
+
+    <script>
+        function enlargeMe(p) {
+            p.innerHTML += "!";
+        }
+    </script>
+</head>
+<body>
+<h2>
+    Exercise 9</h2>
+<input type="button" value="Green" onclick="document.bgColor='lightgreen'">&nbsp;&nbsp;
+<input type="button" value="Blue" onclick="document.bgColor='lightblue'">
+<input type="button" value="Red" onclick="document.bgColor='pink'">
+
+<div onclick="this.style.color='blue'">
+    This text changes color when you click it
+</div>
+
+<div onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">
+    This text changes color when you move the mouse over it
+</div>
+<p onclick="enlargeMe(this);">
+    This is the last line of the page
+</p>
+</body>
+</html>

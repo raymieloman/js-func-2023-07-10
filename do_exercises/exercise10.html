@@ -1,0 +1,44 @@
+﻿<!doctype html>
+<html>
+<head>
+    <title>Exercise 10</title>
+    <script>
+
+        function setCelsius() {
+            const fahrenheit = document.temperature.fahrenheit.value;
+            const celsius = convertToCelsius(fahrenheit);
+            document.temperature.celsius.value = celsius;
+        }
+
+        function setFahrenheit() {
+            const celsius = document.temperature.celsius.value;
+            const fahrenheit = convertToFahrenheit(celsius);
+            document.temperature.fahrenheit.value = fahrenheit;
+        }
+
+        function convertToFahrenheit(celsius) {
+            celcius = parseFloat(celsius);
+            const fahrenheit = (celsius * 9 / 5) + 32;
+
+            return parseInt(fahrenheit);
+        }
+
+        function convertToCelsius(fahrenheit) {
+            fahrenheit = parseFloat(fahrenheit);
+            const celsius = (fahrenheit - 32) * 5 / 9;
+
+            return parseInt(celsius);
+        }
+
+    </script>
+</head>
+<body>
+<h2>Exercise 10</h2>
+<form name="temperature">
+    Degrees Celsius : <input type="text" name="celsius" value="">
+    <input type="button" value="convert" onclick="setFahrenheit();"> <br> <br>
+    Degrees Fahrenheit : <input type="text" name="fahrenheit" value="">
+    <input type="button" value="convert" onclick="setCelsius();">
+</form>
+</body>
+</html>

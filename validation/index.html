@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>:: Lid worden ::</title>
+    <script>
+        function validate() {
+            let firstname = document.getElementById("firstname").value;
+            let lastname = document.getElementById("lastname").value;
+            let email = document.getElementById("email").value;
+
+            let message = "";
+
+            if (!firstname || firstname == "") {
+                message += "Firstname is required\n";
+            }
+
+            if (!lastname || lastname === "") {
+                message += "Lastname is required\n";
+            }
+
+            if (!email || email === "") {
+                message += "Email is required\n";
+            }
+
+            if (message !== "") {
+                alert(message);
+                return false;
+            } else {
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+<form name="data" method="post" action="eval.php" onsubmit="return validate();">
+
+    Firstname: <input type="text" name="firstname" id="firstname"/><br/>
+    Lastname:  <input type="text" name="lastname" id="lastname"/><br/>
+    Email:     <input type="text" name="email" id="email"/><br/>
+
+    <input type="submit" value="Opslaan"/>
+
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+﻿<!doctype html>
+<html>
+<head>
+    <title>Exercise 11</title>
+    <style type="text/css">
+        div.large {
+            font-size: 20pt;
+            font-weight: bold;
+        }
+
+        div.festive {
+            font-family: Comic Sans MS;
+            font-style: italic;
+            color: Fuchsia;
+            background-color: lightgreen;
+            border: 7px double blue;
+            width: 50%;
+            margin: 20px 0 10px 20%;
+        }
+
+        h4.showable {
+            cursor: pointer;
+            color: blue;
+        }
+
+    </style>
+    <script>
+        function start() {
+            document.getElementById("div1").addEventListener("click", function () {
+                this.className = "large";
+            });
+            document.getElementById("div2").addEventListener("click", function () {
+                this.className = "festive";
+            });
+
+            // add event handlers for div3 and div4
+            document.getElementById("div3").addEventListener("click", function () {
+                show("topic3");
+            });
+            document.getElementById("div4").addEventListener("click", function () {
+                show("topic4");
+            });
+        }
+
+
+        function show(id) {
+            let element = document.getElementById(id);
+            let styleDisplay = element.style.display ? "" : "none";
+            element.style.display = styleDisplay;
+        }
+
+    </script>
+</head>
+<body onload="start()">
+<h2>
+    Exercise 11</h2>
+<div id="div1">
+    This is just a line of text
+</div>
+<div id="div2">
+    This is another line of text
+</div>
+<div id="div3">
+    <h4 class="showable">
+        This the header text</h4>
+    <div id="topic3">
+        And this is the content<br>
+        And this is the content<br>
+        And this is the content<br>
+        And this is the content<br>
+        And this is the content<br>
+        And this is the content<br>
+    </div>
+</div>
+<div id="div4">
+    <h4 class="showable">
+        This stuff is about planets</h4>
+    <div id="topic4" style="display:none">
+        The first planet is Mercury, barren and baking hot<br/>
+        The next planet is Venus, it's like an oven under its thick clouds<br/>
+        Then there is the wonderful Earth with its relatively large moon<br/>
+        Next up is Mars, cold and extremely dry<br/>
+        Then you will find the asteroids, such as Ceres, Vesta, Pallas, Hygiea, etc<br/>
+        Then there is the giant Jupiter, including its red spot and four large moons<br/>
+        Beyond Jupiter is Saturn, with its wonderful rings and its many moons<br/>
+        Even further out is Uranus, icy and blue, but too faint to be seen<br/>
+        Neptune is even farther away, even colder, and slightly heavier then Uranus<br/>
+        Still further out there are many dwarf planets such as Pluto, Eris, Haumea, Makemake,
+        Sedna and dozens of others...
+    </div>
+</div>
+</body>
+</html>

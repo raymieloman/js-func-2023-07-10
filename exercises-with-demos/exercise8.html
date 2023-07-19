@@ -1,0 +1,106 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <title>Exercise 8</title>
+    <style type="text/css">
+        div.larger
+        {
+            font-size: 15px;
+            color: Red;
+        }
+        div.smaller
+        {
+            font-size: 9px;
+            color: Gray;
+        }
+    </style>
+    <script>
+        // div5 is er  nu nog niet
+        function start() {
+            document.getElementById("div1").style.fontWeight = "bold";
+            document.getElementById("div2").style.color = "blue";
+            document.getElementById("div3").style.marginLeft = "10%";
+            document.getElementById("div4").innerHTML = "<p>Set by Raymie</p>";
+            document.getElementById("div4").style.fontStyle = "italic";
+        }
+
+        function styleToGold() {
+            for (let div of document.getElementsByTagName("div")) {
+                div.style.backgroundColor = "gold";
+            }
+        }
+
+        function country(select) {
+            // alert(select)
+            // alert("I am here");
+            alert(select.value);
+        }
+
+        function removeSecondDiv() {
+            document.getElementById("div2").style.display = "none";
+        }
+
+        function addSecondDiv() {
+            document.getElementById("div2").style.display = "block";
+        }
+
+
+        function addParagraphTo5thDiv() {
+            let div5 = document.getElementById("div5");
+            console.assert(div5 != null);
+            for (let i = 1; i <= 3; i++) {
+                let p = document.createElement('p');
+                p.innerHTML = `This paragraph ${i}`;
+                div5.appendChild(p)
+            }
+        }
+    </script>
+</head>
+<body onload="start()">
+<h2>Exercise 8</h2>
+<div id="div1">
+    This is a first bit of text
+</div>
+<div id="div2">
+    This is the second part<br/>
+    This is the second part<br/>
+    This is the second part<br/>
+    This is the second part<br/>
+    This is the second part<br/>
+</div>
+<div id="div3">
+    This is a final part of text
+</div>
+<div id="div4"></div>
+<div id="div5"></div>
+
+<button onclick="styleToGold();">Gold</button>
+<br><br>
+<button onclick="removeSecondDiv()">Kill 2nd div</button>
+<button onclick="addSecondDiv()">enable 2nd div</button>
+<button onclick="addParagraphTo5thDiv()">Add paragraphs to div5</button>
+
+Land:<select name="land" id="country" onchange="country(this)">
+    <option label="Nederland" value="NL">
+    </option>
+    <option label="Belgie" value="BE"></option>
+</select>
+
+Geboorteland:
+<select name="originCountry" id="originCountry" onchange="country(this)">
+    <option label="Nederland" value="NL">
+    </option>
+    <option label="Belgie" value="BE"></option>
+</select>
+
+
+<div onmouseover="this.style.color='green'"
+     onmouseout="this.style.color='black'">
+    Hover the mouse over this text to turn it green
+</div>
+
+<div onmouseover="this.className='larger'"
+     onmouseout="this.className='smaller'">
+    Hover the mouse over to enlarge</div>
+</body>
+</html>

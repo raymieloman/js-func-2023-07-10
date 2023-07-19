@@ -1,0 +1,110 @@
+﻿<!doctype html>
+<html>
+<head>
+    <title>Exercise 13</title>
+    <script>
+        function test() {
+
+            document.getElementsByName("text1")[0].value = document.getElementsByName("text1")[0].value.toUpperCase();
+            document.getElementsByName("text2")[0].value = document.getElementsByName("text2")[0].value.substring(0, 3);
+
+            let value3 = document.getElementsByName("text3")[0].value;
+            let adaptedValue3 = value3.substring(value3.length - 3, value3.length);
+            document.getElementsByName("text3")[0].value = adaptedValue3
+
+
+            document.getElementsByName("text4")[0].value = document.getElementsByName("text4")[0].value.split("").reverse().join("");
+            document.getElementsByName("text5")[0].value = Math.sqrt(document.getElementsByName("text5")[0].value);
+            document.getElementsByName("text6")[0].value = new Date().toLocaleString();
+            document.getElementsByName("text7")[0].value = new Date().getFullYear();
+            document.getElementsByName("text8")[0].value = Math.floor((new Date() - new Date(2000, 3, 30)) / (1000 * 60 * 60 * 24));
+            document.getElementsByName("text9")[0].value = Math.floor((new Date() - new Date().setHours(0, 0, 0, 0)) / 1000);
+        }
+    </script>
+</head>
+<body>
+<h2>
+    Exercise 13</h2>
+<form name="testform">
+    <table>
+        <tr>
+            <td>
+                Convert to uppercase:
+            </td>
+            <td>
+                <input type="text" name="text1"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Leave only the first three characters:
+            </td>
+            <td>
+                <input type="text" name="text2"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Leave only the last three characters:
+            </td>
+            <td>
+                <input type="text" name="text3"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Reverse this text:
+            </td>
+            <td>
+                <input type="text" name="text4"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Replace this number by its square root:
+            </td>
+            <td>
+                <input type="text" name="text5"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Put the current (local) date and time here:
+            </td>
+            <td>
+                <input type="text" name="text6" style="width:180pt"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Put the current year here:
+            </td>
+            <td>
+                <input type="text" name="text7"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Calculate how many complete days have elapsed since April 30, 2000:
+            </td>
+            <td>
+                <input type="text" name="text8"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Calculate how many seconds have elapsed since midnight:
+            </td>
+            <td>
+                <input type="text" name="text9"/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="button" style="font-size:larger" value="Try it!" onclick="test()"/>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

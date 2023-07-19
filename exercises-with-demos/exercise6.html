@@ -1,0 +1,79 @@
+﻿<!doctype html>
+<html>
+<head>
+    <title>Exercise 6</title>
+    <script>
+
+        function totalize(array) {
+            totaal = 0;
+            for (let i = 0; i < array.length; i++) {
+                if(!isNaN(array[i])) {
+                    totaal += array[i];
+                }
+            }
+
+            return totaal;
+        }
+
+        let spelers = []
+        for (let i = 0; i <= 10; i++) {
+            spelers[i] = i;
+        }
+
+        console.log(spelers.length);
+
+        let totaal = 0;
+        for (let i = 0; i < spelers.length; i++) {
+            totaal += spelers[i];
+        }
+
+        console.log(totaal);
+
+        spelers[20] = 20;
+
+        totaal = 0;
+        for (let i = 0; i < spelers.length; i++) {
+            totaal += spelers[i];
+        }
+        console.log(totaal);
+
+        // fix door oefening 5
+        totaal = 0;
+        for (let i = 0; i < spelers.length; i++) {
+            if(!isNaN(spelers[i])) {
+                totaal += spelers[i];
+            }
+        }
+        console.log(totaal);
+
+        // oefening 6
+        console.log(`Het totaal uit de functie is: ${totalize(spelers)}`);
+
+
+        // for each loop
+
+        for(let speler of spelers) {
+            console.log(speler);
+        }
+
+
+        let names = ['Jan', 'Piet', 'Joris', 'Korneel'];
+        // for (let element of verzameling)
+        for(let name of names) {
+            console.log(name);
+        }
+
+
+
+
+    </script>
+</head>
+<body>
+<h2>
+    Exercise 6</h2>
+<script>
+
+</script>
+
+</body>
+</html>

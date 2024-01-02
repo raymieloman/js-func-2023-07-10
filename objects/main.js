@@ -28,5 +28,16 @@ person.hobbies = ["Hardlopen", "Lezen", "Programming"]
 // person.partner="Suzanne"
 printMe(person)
 
+let person2 = {
+    firstName: "Raymond",
+    lastName: 'Loman',
+    hobbies: ['Running', 'Reading', 'Randomizing with friends :-)'],
+    partner: {
+        firstName: 'Francien',
+        lastName: 'Loman - Strijkers'
+    }
+}
+printMe(person2)
+
 
 
